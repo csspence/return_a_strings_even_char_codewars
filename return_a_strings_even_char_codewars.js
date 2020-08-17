@@ -7,6 +7,18 @@ For example:
 "a"             --> "invalid string"
 */
 
-function evenChars(string) {
-//keep coding!
+const evenChars = (string) => {
+  if(string.length < 2 || string.length > 100) {
+    return 'invalid string';
+  }
+  let index = 1;
+  let arr = [];
+  for(let i = 0; i < string.length; i++) {
+    if(index % 2 === 0) {
+      arr.push(string[i]);
+    }
+    index++;
+  }
+
+  return arr;
 }
